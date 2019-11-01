@@ -18,7 +18,11 @@
   - **Software**
     - https://medium.com/hardware-interfacing/how-to-install-pytorch-v4-0-on-raspberry-pi-3b-odroids-and-other-arm-based-devices-91d62f2933c7 (installing pytorch on raspberry pi)
   - **Papers**
-    - https://link.springer.com/article/10.1007/s10919-008-0055-9
-    - https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1559-1816.1994.tb00570.x
+    - https://link.springer.com/article/10.1007/s10919-008-0055-9 (Acoustic Analysis and Perception of Anxiety in Social Phobics’ Speech)
+    - https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1559-1816.1994.tb00570.x (The Role of Auditory Cues in the Detection of State Anxiety)
+    - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5072238/ (The Effects of Music Therapy on Anxiety and Depression of Cancer)
+    - https://www.sciencedirect.com/science/article/pii/S0197455615000064 (Music therapy in generalized anxiety disorder)
+    - https://www.sciencedirect.com/science/article/pii/S0147956398900048 (Effectiveness of a music therapy intervention on relaxation and anxiety for patients receiving ventilatory assistance)
+    - https://www.liebertpub.com/doi/abs/10.1089/jpm.2007.0193 (The Effect of Music Therapy on Anxiety in Patients who are Terminally Ill)
   
   
