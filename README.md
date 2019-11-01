@@ -13,6 +13,7 @@
       
 **Things to consider**
   - what other methods could be used to reduce anxiety?
+  - looking over the other high school projects from 2019
     
 **Resources**
   - **Hardware**
