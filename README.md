@@ -10,6 +10,9 @@
       - raspberry pi runs the CNN in pytorch
       - recordings are stored such that privacy is not compromised (when should the client's voice be recorded? perhaps after some indication of possibility?)
       - (where should all of the components be stored?)
+      
+**Things to consider**
+  - what other methods could be used to reduce anxiety?
     
 **Resources**
   - **Hardware**
