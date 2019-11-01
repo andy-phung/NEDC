@@ -17,7 +17,7 @@
     
 **Resources**
   - **Rules**
-    - https://mesa.ucop.edu/wp-content/uploads/2018/08/NEDC-18-19-Rules-Complete-w_CA-Addendum.pdf
+    - https://mesa.ucop.edu/wp-content/uploads/2018/08/NEDC-18-19-Rules-Complete-w_CA-Addendum.pdf (not updated)
   - **Hardware**
     - https://maker.pro/raspberry-pi/tutorial/how-to-connect-and-interface-raspberry-pi-with-arduino (interfacing arduino and raspberry pi)
     - https://conoroneill.net/2013/06/05/connecting-an-arduino-to-raspberry-pi-for-the-best-of-both-worlds/
