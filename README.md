@@ -18,7 +18,8 @@
 **Things to consider**
   - what other methods could be used to reduce anxiety?
   - looking over the other high school projects from 2019
-    
+  - add more, there is a lot to consider and do (for MESA, MIT THiNK, and SynChamp) 
+
 **Resources**
   - **Rules**
     - https://mesa.ucop.edu/wp-content/uploads/2018/08/NEDC-18-19-Rules-Complete-w_CA-Addendum.pdf (not updated)
