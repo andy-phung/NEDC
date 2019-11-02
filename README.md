@@ -1,4 +1,4 @@
-# MESA NEDC, Round 2
+# MESA NEDC Round 2
 **Project Outline**
   - **Need to be addressed**: State Anxiety/Mental Disorders
   - **Hardware**: Arduino, Raspberry Pi 3, Microphone
