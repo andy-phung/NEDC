@@ -10,6 +10,7 @@
       - raspberry pi runs the CNN in pytorch
       - recordings are stored such that privacy is not compromised (when should the client's voice be recorded? perhaps after some indication of possibility?)
       - (where should all of the components be stored?)
+      - **Advantages over competitors**:
 
 **Logistics**
   - Registration: 
@@ -18,6 +19,7 @@
 **Things to consider**
   - what other methods could be used to reduce anxiety?
   - looking over the other high school projects from 2019
+  - The possible fact that those who suffer from anxiety disorders could tend to not speak as often as others
   - add more, there is a lot to consider and do (for both MESA and MIT THiNK, SynChamp is likely going to be a separate project) 
 
 **Resources**
