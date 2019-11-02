@@ -18,7 +18,7 @@
 **Things to consider**
   - what other methods could be used to reduce anxiety?
   - looking over the other high school projects from 2019
-  - add more, there is a lot to consider and do (for MESA, MIT THiNK, and SynChamp) 
+  - add more, there is a lot to consider and do (for both MESA and MIT THiNK, SynChamp is likely going to be a separate project) 
 
 **Resources**
   - **Rules**
