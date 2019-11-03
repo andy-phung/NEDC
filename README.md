@@ -1,7 +1,7 @@
 # MESA NEDC Round 2
 **Project Outline**
   - **Need to be addressed**: Anxiety Disorders
-  - **Hardware**: Arduino, Raspberry Pi 3 + SD Card, Microphone, Heart Rate/Pulse Monitor
+  - **Hardware**: Arduino, Raspberry Pi 3 + SD Card, Lav Mic/Microphone, Heart Rate/Pulse Monitor
   - **Software/Libraries**: Arduino IDE, Pytorch
   - **Approach**
     - **Ideas**
@@ -36,6 +36,7 @@
     - https://mesa.ucop.edu/wp-content/uploads/2018/08/NEDC-18-19-Rules-Complete-w_CA-Addendum.pdf (not updated)
   - **Hardware**
     - https://maker.pro/raspberry-pi/tutorial/how-to-connect-and-interface-raspberry-pi-with-arduino (interfacing arduino and raspberry pi)
+    - http://soundsmate.com/principles-microphone-placement/ (mic placement)
     - https://conoroneill.net/2013/06/05/connecting-an-arduino-to-raspberry-pi-for-the-best-of-both-worlds/
   - **Software**
     - https://medium.com/hardware-interfacing/how-to-install-pytorch-v4-0-on-raspberry-pi-3b-odroids-and-other-arm-based-devices-91d62f2933c7 (installing pytorch on raspberry pi)
