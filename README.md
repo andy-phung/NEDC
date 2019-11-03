@@ -2,7 +2,7 @@
 **Project Outline**
   - **Need to be addressed**: State Anxiety/Mental Disorders
   - **Hardware**: Arduino, Raspberry Pi 3, Microphone
-  - **Software**: Arduino IDE, Pytorch
+  - **Software/Libraries**: Arduino IDE, Pytorch
   - **Approach**
     - **Ideas**
       - use a CNN to translate acoustic parameters into a number indicating the probabilty that the subject in a recording had been experiencing anxiety/a panic attack
