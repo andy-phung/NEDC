@@ -22,6 +22,7 @@
   - looking over the other high school projects from 2019
   - The possible fact that those who suffer from anxiety disorders could tend to not speak as often as others (this project is essentially "exploit the relationship between [biometric data] with [disorder] to administer [treatment/therapy])
   - all team members must have contributed equally (no filler members)
+  - the arduino could run a tensorflow neural net
   - add more, there is a lot to consider and do (for both MESA and MIT THiNK, SynChamp is likely going to be a separate project) 
   - **Construction Precautions**
     - handle all hardware components carefully
