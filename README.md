@@ -12,7 +12,7 @@
       - (where should all of the components be stored?)
   - **Competitors**:
     - **Advantages over competitors**:
-
+  - **Design Process**
 **Logistics**
   - Registration: 
   - Members: Andy Phung, Louie Cabrera, ______________
