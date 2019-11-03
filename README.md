@@ -23,6 +23,11 @@
   - The possible fact that those who suffer from anxiety disorders could tend to not speak as often as others (this project is essentially "exploit the relationship between [biometric data] with [disorder] to administer [treatment/therapy])
   - all team members must have contributed equally (no filler members)
   - add more, there is a lot to consider and do (for both MESA and MIT THiNK, SynChamp is likely going to be a separate project) 
+  - **Construction Precautions**
+    - handle all hardware components carefully
+    - ground yourself before touching hardware
+    - ensure connections are correct
+    - do not change connections while arduino/raspberry pi is powered
 
 **Resources**
   - **Rules**
