@@ -5,7 +5,7 @@
   - **Software/Libraries**: Arduino IDE, Pytorch
   - **Approach**
     - **Ideas**
-      - use a CNN to translate acoustic parameters and heart rate into a number indicating the probabilty that the subject in a recording had been experiencing anxiety/a panic attack
+      - use a CNN to translate acoustic parameters and heart rate into a number indicating the probabilty that the subject in a recording had been experiencing anxiety/a panic attack, then administer noninvasive therapy/treatment
       - arduino controls the microphone and and interfaces with the raspberry pi
       - raspberry pi runs the CNN in pytorch
       - recordings are stored such that privacy is not compromised (when should the client's voice be recorded? perhaps after some indication of possibility?)
@@ -19,6 +19,7 @@
       
 **Things to consider**
   - what other methods could be used to reduce anxiety?
+  - swap out acoustic cues for another indicator, as speech isolation is difficult
   - looking over the other high school projects from 2019
   - The possible fact that those who suffer from anxiety disorders could tend to not speak as often as others (this project is essentially "exploit the relationship between [biometric data] with [disorder] to administer [treatment/therapy])
   - all team members must have contributed equally (no filler members)
