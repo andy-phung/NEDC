@@ -25,7 +25,7 @@
   - add more, there is a lot to consider and do (for both MESA and MIT THiNK, SynChamp is likely going to be a separate project) 
   - **Construction Precautions**
     - handle all hardware components carefully
-    - ground yourself before touching hardware
+    - ground before touching hardware
     - ensure connections are correct
     - do not change connections while arduino/raspberry pi is powered
 
