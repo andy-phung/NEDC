@@ -19,7 +19,7 @@
       
 **Things to consider**
   - what other methods could be used to reduce anxiety?
-  - swap out acoustic cues for another indicator, as speech isolation is difficult
+  - swap out acoustic cues for another indicator, as background noise could interfere with detection
   - looking over the other high school projects from 2019
   - The possible fact that those who suffer from anxiety disorders could tend to not speak as often as others (this project is essentially "exploit the relationship between [biometric data] with [disorder] to administer [treatment/therapy])
   - all team members must have contributed equally (no filler members)
