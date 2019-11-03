@@ -44,5 +44,9 @@
     - https://www.sciencedirect.com/science/article/pii/S0197455615000064 (Music therapy in generalized anxiety disorder)
     - https://www.sciencedirect.com/science/article/pii/S0147956398900048 (Effectiveness of a music therapy intervention on relaxation and anxiety for patients receiving ventilatory assistance)
     - https://www.liebertpub.com/doi/abs/10.1089/jpm.2007.0193 (The Effect of Music Therapy on Anxiety in Patients who are Terminally Ill)
+    - https://www.sciencedirect.com/science/article/abs/pii/S002239999700202X (Autonomic balance revisited: Panic anxiety and heart rate variability)
+    - https://www.sciencedirect.com/science/article/abs/pii/S0002870300160053 (Heart rate variability in depressive and anxiety disorders)
+    - https://www.tandfonline.com/doi/abs/10.1080/03637757109375689?journalCode=rcmm19 (Heart rate as an index of speech anxiety)
+    - https://psycnet.apa.org/record/1962-03143-001 (Human heart rate responses during experimentally induced anxiety)
   
   
