@@ -1,11 +1,11 @@
 # MESA NEDC Round 2
 **Project Outline**
   - **Need to be addressed**: State Anxiety/Mental Disorders
-  - **Hardware**: Arduino, Raspberry Pi 3, Microphone
+  - **Hardware**: Arduino, Raspberry Pi 3, Microphone, Heart Rate Monitor
   - **Software/Libraries**: Arduino IDE, Pytorch
   - **Approach**
     - **Ideas**
-      - use a CNN to translate acoustic parameters into a number indicating the probabilty that the subject in a recording had been experiencing anxiety/a panic attack
+      - use a CNN to translate acoustic parameters and heart rate into a number indicating the probabilty that the subject in a recording had been experiencing anxiety/a panic attack
       - arduino controls the microphone and and interfaces with the raspberry pi
       - raspberry pi runs the CNN in pytorch
       - recordings are stored such that privacy is not compromised (when should the client's voice be recorded? perhaps after some indication of possibility?)
