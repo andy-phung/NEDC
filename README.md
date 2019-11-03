@@ -1,7 +1,7 @@
 # MESA NEDC Round 2
 **Project Outline**
   - **Need to be addressed**: State Anxiety/Mental Disorders
-  - **Hardware**: Arduino, Raspberry Pi 3, Microphone, Heart Rate/Pulse Monitor
+  - **Hardware**: Arduino, Raspberry Pi 3 + SD Card, Microphone, Heart Rate/Pulse Monitor
   - **Software/Libraries**: Arduino IDE, Pytorch
   - **Approach**
     - **Ideas**
