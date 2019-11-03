@@ -15,7 +15,7 @@
 
 **Logistics**
   - Registration: 
-  - Members: Andy Phung, Louie Cabrera, _____
+  - Members: Andy Phung, Louie Cabrera, ______________
       
 **Things to consider**
   - what other methods could be used to reduce anxiety?
