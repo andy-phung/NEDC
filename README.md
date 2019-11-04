@@ -2,12 +2,12 @@
 **Project Outline**
   - **Need to be addressed**: Anxiety Disorders
   - **Hardware**: Arduino, Raspberry Pi 3 + SD Card, Lav Mic/Microphone, Heart Rate/Pulse Monitor
-  - **Software/Libraries**: Arduino IDE, Pytorch
+  - **Software/Libraries**: Arduino IDE, Pytorch/Tensorflow
   - **Approach**
     - **Ideas**
       - use a CNN to translate acoustic parameters and heart rate into a number indicating the probabilty that the subject in a recording had been experiencing anxiety/a panic attack, then administer noninvasive therapy/treatment
       - arduino controls the microphone and and interfaces with the raspberry pi
-      - raspberry pi runs the CNN in pytorch
+      - raspberry pi runs the CNN (trained with pytorch/tensorflow)
       - recordings are stored such that privacy is not compromised (when should the client's voice be recorded? perhaps after some indication of possibility?)
       - (where should all of the components be stored?)
   - **Competitors**:
