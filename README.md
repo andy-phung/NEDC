@@ -13,6 +13,7 @@
   - **Competitors**:
     - **Advantages over competitors**:
   - **Design Process**
+  
 **Logistics**
   - Registration: Deadline unknown
   - Members: Andy Phung, Louie Cabrera, ______________
