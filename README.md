@@ -26,7 +26,8 @@
   - looking over the other high school projects from 2019
   - The possible fact that those who suffer from anxiety disorders could tend to not speak as often as others (this project is essentially "exploit the relationship between [biometric data] with [disorder] to administer [treatment/therapy])
   - all team members must have contributed equally (no filler members)
-  - the arduino could run a tensorflow neural net or use cloud processing (the former would be more difficult to present in a positive light due to the cost of cloud computing)
+  - the arduino could run a tensorflow neural net or use cloud processing (the former would be more difficult to present in a positive light due to the cost of cloud computing
+  - a generative *adversarial* network may be unnecessary
   - **Construction Precautions**
     - handle all hardware components carefully
     - ground before touching hardware
@@ -50,6 +51,7 @@
     - https://conoroneill.net/2013/06/05/connecting-an-arduino-to-raspberry-pi-for-the-best-of-both-worlds/
   - **Software**
     - https://medium.com/hardware-interfacing/how-to-install-pytorch-v4-0-on-raspberry-pi-3b-odroids-and-other-arm-based-devices-91d62f2933c7 (installing pytorch on raspberry pi)
+    - https://openai.com/blog/generative-models/ (generative models)
   - **Papers**
     - https://link.springer.com/article/10.1007/s10919-008-0055-9 (Acoustic Analysis and Perception of Anxiety in Social Phobics’ Speech)
     - https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1559-1816.1994.tb00570.x (The Role of Auditory Cues in the Detection of State Anxiety)
