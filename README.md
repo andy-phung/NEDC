@@ -31,10 +31,17 @@
     - ground before touching hardware
     - ensure connections are correct
     - do not change connections while arduino/raspberry pi is powered
-
+    
+ **Ordered TODO**
+ - **Project**
+  1. read papers on acoustic cues as indicators for anxiety
+  2. implement GAN that is capable of generating training data (given the associations between certain acoustic cues/heart rate and anxiety)
+ - **Competition**
+  1. find updated rules
+  
 **Resources**
   - **Rules**
-    - https://mesa.ucop.edu/wp-content/uploads/2018/08/NEDC-18-19-Rules-Complete-w_CA-Addendum.pdf (not updated)
+    - (not updated) https://mesa.ucop.edu/wp-content/uploads/2018/08/NEDC-18-19-Rules-Complete-w_CA-Addendum.pdf 
   - **Hardware**
     - https://maker.pro/raspberry-pi/tutorial/how-to-connect-and-interface-raspberry-pi-with-arduino (interfacing arduino and raspberry pi)
     - http://soundsmate.com/principles-microphone-placement/ (mic placement)
