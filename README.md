@@ -35,11 +35,11 @@
     
  **Ordered TODO**
  - **Project**
-  1. read papers on anxiety indicators
+  1. read papers on anxiety indicators, extract and document key information/data
   2. implement synthetic data generation algorithm
   3. train CNN
   4. implement CNN on raspberry pi
-  5. interface raspberry pi and arduino
+  5. interface raspberry pi and arduino, along with other hardware components
   6. write arduino program
   7. construct chassis
   8. assemble all parts
