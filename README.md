@@ -57,7 +57,7 @@
   - **Software**
     - https://medium.com/hardware-interfacing/how-to-install-pytorch-v4-0-on-raspberry-pi-3b-odroids-and-other-arm-based-devices-91d62f2933c7 (installing pytorch on raspberry pi)
     - https://opensource.com/article/19/9/audio-processing-machine-learning-python (python audio processing)
-  - **Papers** 
+  - **Papers** (use researchgate to find free versions of articles)
     - **Detection**
       - https://link.springer.com/article/10.1007/s10919-008-0055-9 (Acoustic Analysis and Perception of Anxiety in Social Phobics’ Speech)
       - https://www.sciencedirect.com/science/article/abs/pii/S0002870300160053 (Heart rate variability in depressive and anxiety disorders)
