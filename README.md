@@ -45,6 +45,7 @@
   8. assemble all parts
  - **Competition**
   1. find updated rules
+  2. fabricate design process
   
 **Resources**
   - **Rules**
