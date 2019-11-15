@@ -52,6 +52,7 @@
   - **Rules**
     - https://static1.squarespace.com/static/5c9a89a5b10f2543fc85dacd/t/5d6ed734fa8349000138bbe0/1567545146608/NEDC+19-20+Specifications+w_CA+addendum.pdf
     - https://docs.google.com/document/d/1nAW40ddnQ9bKP-cwnOATC5p0L5kLmP52kOVH_K2hPZ0/edit (official resources doc)
+    - https://drive.google.com/folderview?id=1Corclv49kplbJnT_kUKaY4hlH4KG475a (changes and insights)
   - **Hardware**
     - https://maker.pro/raspberry-pi/tutorial/how-to-connect-and-interface-raspberry-pi-with-arduino (interfacing arduino and raspberry pi)
     - http://soundsmate.com/principles-microphone-placement/ (mic placement)
