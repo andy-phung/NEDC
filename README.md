@@ -1,5 +1,5 @@
 # MESA NEDC (Round 2)
-**Project Outline**
+**Project Outline** (complete this project as is described below without modification, fabricate a design process)
   - **Need to be addressed**: Anxiety Disorders
   - **Hardware**: Arduino Uno, Raspberry Pi 3 + SD Card, Lav Mic/Microphone, Heart Rate/Pulse Monitor, Earbuds (possibly with an embedded mic)
   - **Software/Libraries**: Arduino IDE, Pytorch/Tensorflow, Matplotlib
