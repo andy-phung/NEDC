@@ -18,7 +18,8 @@
   - **Design Process**
   
 **Logistics**
-  - Registration: Deadline unknown, contact MESA SJSU
+  - Registration: January 17
+  - Project Report, Pitch Presentation, and Tech. Presentation Submission: February 19
   - Members: Andy Phung, Louie Cabrera, ______________
       
 **Things to consider**
