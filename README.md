@@ -2,7 +2,7 @@
 **Project Outline** (this project will be centered around only the detection of *general* anxiety with end-to-end deep learning and some other type real-time treatment/therapy, fabricate a design process)
   - **Need to be addressed**: Anxiety Disorders
   - **Hardware**: Redboard Artemis, Lav Mic/Microphone, Heart Rate/Pulse Monitor, Earbuds (possibly with an embedded mic)
-  - **Software/Libraries**: Tensorflow Lite, Matplotlib
+  - **Software/Libraries**: Tensorflow Lite (https://codelabs.developers.google.com/codelabs/sparkfun-tensorflow/#0), Matplotlib
   - **Approach**
     - **Ideas**
       - use a CNN to translate acoustic parameters and heart rate into a number indicating the probabilty that the subject in a recording had been experiencing anxiety/a panic attack, then administer noninvasive therapy/treatment
