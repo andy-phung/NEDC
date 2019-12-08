@@ -1,5 +1,5 @@
 # MESA NEDC (Round 2)
-**Project Outline** (this project will be centered around only the detection of *general* anxiety with end-to-end deep learning for medical use  (e.g. generating a medical report), fabricate a design process)
+**Project Outline** (this project will be centered around only the detection of *general* anxiety with end-to-end deep learning for medical use (e.g. generating a medical report) and biofeedback therapy, fabricate a design process)
   - **Need to be addressed**: General Anxiety Disorder
   - **Hardware**: 
     - Sparkfun Redboard Artemis (data collection and bluetooth)
