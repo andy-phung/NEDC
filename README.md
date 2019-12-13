@@ -101,7 +101,7 @@
   2. gather baseline ECG data
   3. implement interfacing between the single-lead heart rate monitor's serial output and the neural net
   4. train neural network (input: output of the data generation algorithm)
-  5. implement neural net
+  5. implement and optimize neural net
   6. implement interfacing between the redboard artemis and android via bluetooth (BLE)
   7. create an android app to allow for biofeedback and/or auditory therapy
   8. reiterate if necessary
