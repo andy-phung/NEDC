@@ -36,6 +36,12 @@
       - issue: interfacing between the sparkfun AD8232's output and the neural net
     - **Therapy**
       - **Android App**
+    - **Interfacing**
+      - **Redboard Artemis -> App**
+        - Ambiqsuite SDK
+      - **Single-lead HRM -> Neural Network**
+        - https://github.com/arduino/ArduinoTensorFlowLiteTutorials/blob/master/GestureToEmoji/ArduinoSketches/IMU_Classifier/IMU_Classifier.ino
+        - https://github.com/arduino/ArduinoTensorFlowLiteTutorials/blob/master/GestureToEmoji/arduino_tinyml_workshop.ipynb
 
   - **Criteria**
     - **Neural Network**
