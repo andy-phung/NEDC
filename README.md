@@ -48,7 +48,7 @@
       - provides real-time, adaptive, and noninvasive therapy
       - have a pronounced effect on the user's panic attacks/anxiety the longer the user uses this (use existing biofeedback methods for anxiety/panic disorder to support this)
       - uses music therapy to support the biofeedback process
-        - **App*
+        - **App**
           - http://users.csc.calpoly.edu/~jdalbey/SWE/QA/UICriteria.html
           - the client can manually adjust the system to fit their needs
           - encrypts and stores the user's data for future medical analysis (not necessary)
