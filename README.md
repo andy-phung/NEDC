@@ -66,7 +66,14 @@
       - biofeedback sensors are noninvasive and are resistant to movement artifact
       - biofeedback sensors can be worn comfortably on a daily basis and are unobtrusive
       - the user's privacy is not compromised
-      
+  - **Data**
+    - hyperparameter tuning
+    - model loss
+    - model accuracy
+    - computational cost
+    - distribution of synthetically generated training data
+    - flowcharts for panic attack recognition, therapy, the entire system, and other systems
+    
   - **Design Process**
         
   - **Competitors**:
