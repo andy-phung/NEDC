@@ -1,0 +1,40 @@
+# ECG/Signal Processing Reference
+- separated into two basic Intervals, the PR Interval and the QT Interval
+- standard file format: .csv or .txt
+- sampling rate unit: Hz
+- each R-wave in an ecg corresponds to the point of systole, the point in the heartbeat where the heart reaches maximal contraction to pump the blood through the body.
+- the number of beats in a minute is called the heart rate
+- **analysis**
+  - **time domain**
+    - heart rate variability/interbeat interval variability
+    - interbeat interval/beat-beat interval
+    - bpm
+    - SDNN
+    - SDSD
+    - RMSSD
+    - mean absolute deviation
+    - Poincare analysis/plotting
+  - **frequency domain**
+    - low frequency component (0.04-0.15Hz)
+    - high frequency component (0.16-0.5Hz)
+    - lf/hf ratio
+- **Anxiety Detection**
+  - **heart rate variability**
+    - has immense potential to determine the role of autonomic nervous system (ANS), which controls smooth muscle, gland activity and cardiac muscle, fluctuations in the human body
+    - the Autonomic Nervous System is divided into two branches -the sympathetic nervous system branch (SNS) (with dominant function in emergency or so-called “fight or flight” situations) and the parasympathetic branch (PNS) (associated with more vegetive functions such as digestion, relaxation, sexual activity, etc.) 
+    - however, under a state of mental stress the balance between the two systems will be altered, which HRV can be used to detect
+  - **interbeat interval**
+    - The time in millisecond between two normal “R” waves  is called the InterBeat Interval (IBI), and is a valuable index for measuring heart rate variability
+    - The IBI variability can be determined either in the time domain or in the frequency domain (frequency allows for the use of much smaller datasets)
+    - From the raw ECG signal, a time series (series of data points indexed (or listed or graphed) in time order) of IBIs (the graph of HrV) can be extracted using a peak detection algorithm
+  - **power spectral analysis**
+    -  Parasympathetic and sympathetic nervous system activity have been associated with two frequency bands. The high frequency (HF) component (0.15-0.4 Hz; which corresponds to the rate of normal respiration) measures the influence of the vagus nerve in modulating the sinoatrial node and is associated with parasympathetic nervous system activity. The low frequency (LF) component (0.04-0.15 Hz.) provides an index of sympathetic effects on the heart. These associations between frequency bands and nervous system activity have been made through the use of functional and pharmacological testing. When a human being is anxious, it is commonly observed that the parasympathetic activity of his/her heart decreases and the sympathetic activity increases. 
+  - **wavelet packet analysis**
+    - Power in the exact frequency range is calculated using wavelet analysis
+    - In the Wavelet Packet (WP) decomposition, the approximation coefficients as well as the detail coefficients are recursively decomposed using the same filtering and down sampling techniques that are used in Discrete Wavelet Transform
+    - A wavelet packet analysis provides us with a convenient tool to analyze a signal for a desired frequency without losing the time information. The wavelet packets can be used for numerous expansions of a given signal, from which we can extract the exact frequency band that we are interested in. The WP decomposition of the input signal is performed by computing the convolution of the signal f[n] with the wavelet atoms: 
+    - These wavelet atoms can be obtained from the high pass filter (g [n]) and the low pass filter (h [n])
+    - Each atom Wp (2-j/2k-n) is characterized by three parameters – frequency p, scale j, and position m. 
+    - For our purpose, we have used the Daubechies wavelet filter db5.
+    - The parameters obtained: sympathetic power (S_{p}) and parasympathetic power (P_{p})
+  - **fuzzy logic system**
