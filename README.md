@@ -91,7 +91,7 @@
   - Project Report, Pitch Presentation, and Technical Presentation Submission: February 19
   - Members: Andy, Louie, Nathan, Suryabhan
   - **Work Distribution**
-    - Andy:
+    - Andy: poster, software and hardware implementation
     - Louie: 
     - Nathan:
     - Suryabhan: 
