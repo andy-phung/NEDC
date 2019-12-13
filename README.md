@@ -98,7 +98,8 @@
   5. implement neural net
   6. implement interfacing between the redboard artemis and android via bluetooth (BLE)
   7. create an android app to allow for biofeedback and/or auditory therapy
-  8. design and 3d print an enclosure
+  8. reiterate if necessary
+  9. design and 3d print an enclosure
  - **Competition**
   1. find updated rules
   2. project report
