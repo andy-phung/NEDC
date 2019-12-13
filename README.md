@@ -38,7 +38,8 @@
       - **Android App**
     - **Interfacing**
       - **Redboard Artemis -> App**
-        - Ambiqsuite SDK
+        - Ambiqsuite SDK (https://github.com/sparkfun/AmbiqSuiteSDK)
+        - https://forum.sparkfun.com/viewtopic.php?f=169&t=50915&start=15
       - **Single-lead HRM -> Neural Network**
         - https://github.com/arduino/ArduinoTensorFlowLiteTutorials/blob/master/GestureToEmoji/ArduinoSketches/IMU_Classifier/IMU_Classifier.ino
         - https://github.com/arduino/ArduinoTensorFlowLiteTutorials/blob/master/GestureToEmoji/arduino_tinyml_workshop.ipynb
