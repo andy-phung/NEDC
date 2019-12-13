@@ -15,39 +15,42 @@
     - Google Colab/Azure Notebook (model training) (free tier: https://cloud.google.com/free/)
     - Matplotlib (data visualization)
   - **Approach**
-    - Neural Network
-      - use an ANN to translate ecg sensor output into an anxiety index, if a certain threshold is reached, then use biofeedback therapy (bluetooth -> an app) and/or auditory therapy (
-      - data is stored such that privacy is not compromised
-      - input: an X minute .csv or .txt file
-      - post end-to-end output: parasympathetic and sympathetic power, two floats
-      - final output: anxiety index, on a scale of 0-1
-      - wavelet filter: db5
-      - encoder sampling rate: 1000 Hz (in the first paper), ??? Hz (when recording with the AD8232 HRM)
-      - issue: model size, therefore use a smaller end-to-end model
-      - ecg datasets: https://www.kaggle.com/shayanfazeli/heartbeat
-    - synthetic training data generation: https://docs.google.com/presentation/d/1D1ASKCW0OqJtmsLNdJZ25GOwJVfOkWi5i0AdKmTHXRs/edit#slide=id.p
-    - therapy: 
+    - **Synthetic Data Generation**
+      - generate an anxiety index based on an ecg input through an algorithmic process
+      - https://docs.google.com/presentation/d/1D1ASKCW0OqJtmsLNdJZ25GOwJVfOkWi5i0AdKmTHXRs/edit#slide=id.p 
+    - **Neural Network**
+      - use an ANN to translate ecg sensor output into an anxiety index, if a certain threshold is reached, then use biofeedback therapy (bluetooth -> an app) and/or auditory therapy 
+        - input: .csv or .tsv file representing an X minute ECG 
+        - post end-to-end output: parasympathetic and sympathetic power, two floats
+        - final output: anxiety index, on a scale of 0-1
+        - data is stored such that privacy is not compromised
+        - trained and implemented via bluetooth lite
+      - issue: model size
+      - issue: interfacing between the sparkfun AD8232's output and the neural net
+    - **Therapy**
+      - **Android App**
+      
   - **Competitors**:
     - **Advantages over competitors**:
+    
   - **Design Process**
   
 **Logistics**
   - Registration: January 17
-  - Project Report, Pitch Presentation, and Tech. Presentation Submission: February 19
-  - Members: Andy Phung, Louie Cabrera, 
-      
-  - **Construction Precautions**
-    - handle all hardware components carefully
-    - ground before touching hardware
-    - ensure connections are correct
-    - do not change connections while arduino/raspberry pi is powered
+  - Project Report, Pitch Presentation, and Technical Presentation Submission: February 19
+  - Members: Andy, Louie, Nathan, Suryabhan
+  - **Work Distribution**
+    - Andy:
+    - Louie: 
+    - Nathan:
+    - Suryabhan: 
     
  **TODO**
  - **Project**
   1. implement synthetic data generation algorithm
   2. gather baseline ECG data
-  3. train neural network (input: output of the data generation algorithm)
-  4. 
+  3. im
+  4. train neural network (input: output of the data generation algorithm)
  - **Competition**
   1. find updated rules
   2. project report
