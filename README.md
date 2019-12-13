@@ -9,11 +9,17 @@
       - sampling rate: 400 hz (?)
     - Biomedical Sensor Pads + Sensor Cables
   - **Software/Libraries**: 
+    - Python Modules:
+      - matplotlib (data visualization)
+      - numpy
+      - scipy
+      - pandas
+      - scikit-learn
+      - tensorflow
     - py-ecg-detectors (https://pypi.org/project/py-ecg-detectors/) (data generation)
     - Arduino/Processing IDE
     - Tensorflow/Tensorflow Lite (model training)
-    - Google Colab/Azure Notebook (model training) (free tier: https://cloud.google.com/free/)
-    - Matplotlib (data visualization)
+    - Google Colab/Azure Notebook (model training) (free tier: https://cloud.google.com/free/
   - **Approach**
     - **Synthetic Data Generation**
       - generate an anxiety index based on an ecg input through an algorithmic process
@@ -43,7 +49,8 @@
         - the most optimal neural architecture was used
         - program/model size needs to be under 1MB
     - **Data Generation**
-      - 
+      - number of features and length of the dataset should be arbitrary
+      - random noise can be interjected in a controllable manner
     - **Therapy**
       - provides real-time, adaptive, and noninvasive therapy
       - have a pronounced effect on the user's panic attacks/anxiety the longer the user uses this (use existing biofeedback methods for anxiety/panic disorder to support this)
