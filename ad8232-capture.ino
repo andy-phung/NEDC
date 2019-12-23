@@ -4,17 +4,18 @@ development environment specifics:
   Hardware Platform: Redboard Artemis
   AD8232 Heart Monitor Version: 1.0
 ******************************************************************************/
-int readECG()
+#include <Chrono.h>
+
+int timepassed = 0; //is in seconds
+
+void readECG()
 {
-  delay(1); // Wait for a bit to keep serial data from saturating
   if((digitalRead(10) == 1)||(digitalRead(11) == 1)){
     Serial.println('!');
-    return 0;
   }
   else {
     // send the value of analog input 0:
       Serial.println(analogRead(A0));
-      return analogRead(A0);
   }
   
 }
@@ -26,5 +27,15 @@ void setup() {
 }
 
 void loop() {
+  Chrono time;
+  while (time.hasPassed(5000) == false)
+  {
+    readECG();
+    delay(1); //apparently to prevent serial data saturation?
+  }
+  timepassed = timepassed + 5;
+  Serial.println(" ");
+  Serial.println(String(timepassed) + "seconds have passed"); //to check elapsed time
+  Serial.println(" ");
 
 }
