@@ -30,7 +30,7 @@ void loop() {
   Chrono time;
   while (time.hasPassed(5000) == false)
   {
-    readECG();
+    readECG(); //add commas with Serial.print(','); if a .csv file is needed instead of .tsv
     delay(1); //apparently to prevent serial data saturation?
   }
   timepassed = timepassed + 5;
