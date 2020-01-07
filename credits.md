@@ -1,5 +1,0 @@
-- Ivaylo I. Christov, “Real time electrocardiogram QRS detection using combined adaptive threshold”, BioMedical Engineering OnLine 2004, vol. 3:28, 2004.
-- DOI: 10.5281/zenodo.3353396 (https://github.com/c-labpl/qrs_detector) (implementation of the above)
-- https://github.com/pickus91/HRV
-- Lloyd, Stuart P. "Least squares quantization in PCM." Information Theory, IEEE Transactions on 28.2 (1982): 129-137.
-- [find a reference for k-nearest neighbors]
