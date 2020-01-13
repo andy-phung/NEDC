@@ -14,100 +14,101 @@
 #include "tensorflow/lite/experimental/micro/kernels/all_ops_resolver.h"
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "tensorflow/lite/version.h"
-#include "model1.h" //note: model1 is defined as "model1" in this header file, not "model"
-//#include "model2.h"
-namespace {
-constexpr int tensorArenaSize1 = 10 * 1024;
-uint8_t tensorArena1[tensorArenaSize1];
+//#include "model1.h"
+#include "model2.h" //note: model1 is defined as "model1" in this header file, not "model"
 
-tflite::MicroErrorReporter tflErrorReporter;
-tflite::ops::micro::AllOpsResolver tflOpsResolver;
+tflite::ErrorReporter* error_reporter = nullptr;
+const tflite::Model* model = nullptr;
+tflite::MicroInterpreter* interpreter = nullptr;
+TfLiteTensor* input = nullptr;
+TfLiteTensor* output = nullptr;
+int inference_count = 0;
 
-const tflite::Model* tflModel1 = nullptr;
-tflite::MicroInterpreter* tflInterpreter1 = nullptr;
-TfLiteTensor* tflInputTensor1 = nullptr;
-TfLiteTensor* tflOutputTensor1 = nullptr;
-//const tflite::Model* tflModel2 = nullptr;
-//tflite::MicroInterpreter* tflInterpreter2 = nullptr;
-//TfLiteTensor* tflInputTensor2 = nullptr;
-// TfLiteTensor* tflOutputTensor2 = nullptr;
-// Create a static memory buffer for TFLM, the size may need to be adjusted based on the size of the model
+// Create an area of memory to use for input, output, and intermediate arrays.
+// Finding the minimum value for your model may require some trial and error.
+constexpr int kTensorArenaSize = 290 * 1024;
+uint8_t tensor_arena[kTensorArenaSize];
 
-//constexpr int tensorArenaSize2 = 19 * 1024;
 
-//byte tensorArena2[tensorArenaSize2];
-}
-int numSamples = 200;
+int numSamples = 3;
 int samplesRead = 0;
 
-int readECG()
+float readECG()
 {
   if((digitalRead(9) == 1)||(digitalRead(10) == 1)){
     return 0;
   }
   else {
     // send the value of analog input 0:
-      int read = analogRead(A0);
+      float read = analogRead(A0);
       return read;
   }
 }
+
   
 void setup() {
   Serial.begin(9600);
-  Serial.println("cp 1");
-  
-//get the TFL representation of the model byte array for both models
-  
-  tflModel1 = tflite::GetModel(model1);
-  if (tflModel1->version() != TFLITE_SCHEMA_VERSION) {
-    Serial.println("Model schema mismatch!");
-    //while (1);
+  static tflite::MicroErrorReporter micro_error_reporter;
+  error_reporter = &micro_error_reporter;
+
+  // Map the model into a usable data structure. This doesn't involve any
+  // copying or parsing, it's a very lightweight operation.
+  model = tflite::GetModel(model2);
+  if (model->version() != TFLITE_SCHEMA_VERSION) {
+    error_reporter->Report(
+        "Model provided is schema version %d not equal "
+        "to supported version %d.",
+        model->version(), TFLITE_SCHEMA_VERSION);
+    return;
   }
-  Serial.println("cp 2");
+
+  // This pulls in all the operation implementations we need.
+  // NOLINTNEXTLINE(runtime-global-variables)
+  static tflite::ops::micro::AllOpsResolver resolver;
   
-  /*
-  tflModel2 = tflite::GetModel(model2);
-  if (tflModel2->version() != TFLITE_SCHEMA_VERSION) {
-    Serial.println("Model schema mismatch!");
-    while (1);
+  // Build an interpreter to run the model with.
+
+  static tflite::MicroInterpreter static_interpreter(
+      model, resolver, tensor_arena, kTensorArenaSize, error_reporter);
+  
+  interpreter = &static_interpreter;
+
+   //interpreter = new tflite::MicroInterpreter(model, resolver, tensor_arena, kTensorArenaSize, &micro_error_reporter);
+  
+  // Allocate memory from the tensor_arena for the model's tensors.
+  TfLiteStatus allocate_status = interpreter->AllocateTensors();
+  if (allocate_status != kTfLiteOk) {
+    error_reporter->Report("AllocateTensors() failed");
+    return;
   }
-  */
-
-
-  // Create an interpreter to run the model
-  tflInterpreter1 = new tflite::MicroInterpreter(tflModel1, tflOpsResolver, tensorArena1, tensorArenaSize1, &tflErrorReporter);
-  //tflInterpreter2 = new tflite::MicroInterpreter(tflModel2, tflOpsResolver, tensorArena2, tensorArenaSize2, &tflErrorReporter);
-  // Allocate memory for the model's input and output tensors
-  tflInterpreter1->AllocateTensors();
-  //tflInterpreter2->AllocateTensors();
-  Serial.println("cp 3");
-  // Get pointers for the model's input and output tensors
-  tflInputTensor1 = tflInterpreter1->input(0);
-  tflOutputTensor1 = tflInterpreter1->output(0);
-  //tflInputTensor2 = tflInterpreter2->input(0);
-  //tflOutputTensor2 = tflInterpreter2->output(0);
-  Serial.print("we've reached point 2");
-
   
+  // Obtain pointers to the model's input and output tensors.
+  input = interpreter->input(0);
+  output = interpreter->output(0);
+  Serial.println(0);
+  Serial.println(0.25);
+  //TfLiteStatus invokeStatus = interpreter->Invoke();
 }
 
 void loop() {
-while (samplesRead < numSamples){
-  tflInputTensor1->data.f[samplesRead] = (readECG() - 200)/700;
+while(samplesRead < numSamples){
+  input->data.f[samplesRead] = (readECG() - 200)/700;
+  //Serial.println("input:");
+  //Serial.println((readECG() - 200)/700);
   samplesRead++;
   if (samplesRead == numSamples) {
         // Run inferencing
-        TfLiteStatus invokeStatus1 = tflInterpreter1->Invoke();
-        if (invokeStatus1 != kTfLiteOk) {
+        //TfLiteStatus invokeStatus = interpreter->Invoke();
+       /*
+        if (invokeStatus != kTfLiteOk) {
           Serial.println("Invoke failed!");
           while (1);
-          return;
         }
-        for (int i = 0; i < 1; i++) {
-          Serial.print(tflOutputTensor1->data.f[i]);
-          Serial.print(" ");
+*/
+        samplesRead = 0;
+        Serial.println("output:");
+        Serial.println(abs(output->data.f[0])); 
         }
-        Serial.print("\n");
-   }
+  delay(2000);
   }
- }
+  }
