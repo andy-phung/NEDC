@@ -17,6 +17,7 @@
 //#include "model1.h"
 #include "model2.h" //note: model1 is defined as "model1" in this header file, not "model"
 
+
 tflite::ErrorReporter* error_reporter = nullptr;
 const tflite::Model* model = nullptr;
 tflite::MicroInterpreter* interpreter = nullptr;
@@ -29,6 +30,10 @@ int inference_count = 0;
 constexpr int kTensorArenaSize = 290 * 1024;
 uint8_t tensor_arena[kTensorArenaSize];
 
+int red_light_pin= 4;
+int green_light_pin = 3;
+int blue_light_pin = 2;
+int button_pin
 
 int numSamples = 3;
 int samplesRead = 0;
@@ -45,8 +50,19 @@ float readECG()
   }
 }
 
+void RGB_color(int red_light_value, int green_light_value, int blue_light_value)
+ {
+  analogWrite(red_light_pin, red_light_value);
+  analogWrite(green_light_pin, green_light_value);
+  analogWrite(blue_light_pin, blue_light_value);
+}
+
   
 void setup() {
+  pinMode(red_light_pin, OUTPUT);
+  pinMode(green_light_pin, OUTPUT);
+  pinMode(blue_light_pin, OUTPUT);
+  pinMode(button_pin, OUTPUT);
   Serial.begin(9600);
   static tflite::MicroErrorReporter micro_error_reporter;
   error_reporter = &micro_error_reporter;
@@ -88,10 +104,12 @@ void setup() {
   Serial.println(0);
   Serial.println(0.25);
   //TfLiteStatus invokeStatus = interpreter->Invoke();
+  
 }
 
 void loop() {
 while(samplesRead < numSamples){
+  buttonState = digitalRead(buttonPin); //can be either HIGH or LOW
   input->data.f[samplesRead] = (readECG() - 200)/700;
   //Serial.println("input:");
   //Serial.println((readECG() - 200)/700);
