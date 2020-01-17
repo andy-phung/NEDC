@@ -14,8 +14,17 @@
 #include "tensorflow/lite/experimental/micro/kernels/all_ops_resolver.h"
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "tensorflow/lite/version.h"
-//#include "model1.h"
+#include "model1.h"
 #include "model2.h" //note: model1 is defined as "model1" in this header file, not "model"
+
+#define RX1 0
+#define TX1 1
+#define LOMINUS
+#define LOPLUS
+#define RED -1
+#define GREEN -1
+#define BLUE -1
+#define BUTTON_PIN -1
 
 
 tflite::ErrorReporter* error_reporter = nullptr;
@@ -130,3 +139,4 @@ while(samplesRead < numSamples){
   delay(2000);
   }
   }
+//TODO: retrain model, make sure code is consistent
