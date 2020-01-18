@@ -19,12 +19,12 @@
 
 #define RX1 0
 #define TX1 1
-#define LOMINUS
-#define LOPLUS
-#define RED -1
-#define GREEN -1
-#define BLUE -1
-#define BUTTON_PIN -1
+#define LOMINUS 10
+#define LOPLUS 9
+#define RED 7
+#define GREEN 6
+#define BLUE 5
+#define BUTTON_PIN 4
 
 
 tflite::ErrorReporter* error_reporter = nullptr;
@@ -119,6 +119,49 @@ void setup() {
 void loop() {
 while(samplesRead < numSamples){
   buttonState = digitalRead(buttonPin); //can be either HIGH or LOW
+  if(buttonState == HIGH){
+    power_adc_disable();
+
+  // Initialize for low power in the power control block
+  am_hal_pwrctrl_low_power_init();
+
+  // Stop the XTAL.
+  am_hal_clkgen_control(AM_HAL_CLKGEN_CONTROL_XTAL_STOP, 0);
+
+  // Disable the RTC.
+  am_hal_rtc_osc_disable();
+
+  // The default Arduino environment runs the System Timer (STIMER) off the 48 MHZ HFRC clock source.
+  // The HFRC appears to take over 60 uA when it is running, so this is a big source of extra
+  // current consumption in deep sleep.
+  // For systems that might want to use the STIMER to generate a periodic wakeup, it needs to be left running.
+  // However, it does not have to run at 48 MHz. If we reconfigure STIMER (system timer) to use the 32768 Hz
+  // XTAL clock source instead the measured deepsleep power drops by about 64 uA.
+  am_hal_stimer_config(AM_HAL_STIMER_CFG_CLEAR | AM_HAL_STIMER_CFG_FREEZE);
+
+  // This option selects 32768 Hz via crystal osc. This appears to cost about 0.1 uA versus selecting "no clock"
+  am_hal_stimer_config(AM_HAL_STIMER_XTAL_32KHZ);
+
+  // This option would be available to systems that don't care about passing time, but might be set
+  // to wake up on a GPIO transition interrupt.
+  // am_hal_stimer_config(AM_HAL_STIMER_NO_CLK);
+
+  // Turn OFF Flash1
+  if (am_hal_pwrctrl_memory_enable(AM_HAL_PWRCTRL_MEM_FLASH_512K))
+  {
+    while (1);
+  }
+
+  // Power down SRAM
+  PWRCTRL->MEMPWDINSLEEP_b.SRAMPWDSLP = PWRCTRL_MEMPWDINSLEEP_SRAMPWDSLP_ALLBUTLOWER32K;
+
+  Serial.println("Going to sleep...");
+  delay(100); //Wait for print to complete
+
+  Serial.end(); //Disable Serial
+
+  am_hal_sysctrl_sleep(AM_HAL_SYSCTRL_SLEEP_DEEP);
+  }
   input->data.f[samplesRead] = (readECG() - 200)/700;
   //Serial.println("input:");
   //Serial.println((readECG() - 200)/700);
