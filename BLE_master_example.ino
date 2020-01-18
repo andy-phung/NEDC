@@ -1,6 +1,6 @@
     #include <SoftwareSerial.h>   //Software Serial Port
-    #define RxD 2
-    #define TxD 3
+    #define RxD 0
+    #define TxD 1
 
     #define DEBUG_ENABLED  1
 
