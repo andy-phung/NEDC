@@ -72,7 +72,10 @@ void setup() {
   pinMode(green_light_pin, OUTPUT);
   pinMode(blue_light_pin, OUTPUT);
   pinMode(button_pin, OUTPUT);
+  pinMode(RX1, INPUT);
+  pinMode(TX1, OUTPUT);
   Serial.begin(9600);
+  setupBleConnection();
   static tflite::MicroErrorReporter micro_error_reporter;
   error_reporter = &micro_error_reporter;
 
