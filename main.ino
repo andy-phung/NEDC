@@ -15,7 +15,9 @@
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "tensorflow/lite/version.h"
 #include "model1.h"
-#include "model2.h" //note: model1 is defined as "model1" in this header file, not "model"
+//#include "model2.h" //note: model1 is defined as "model1" in this header file, not "model"
+
+#include "functions.h"
 
 #define RX1 0
 #define TX1 1
@@ -42,29 +44,11 @@ uint8_t tensor_arena[kTensorArenaSize];
 int red_light_pin= 4;
 int green_light_pin = 3;
 int blue_light_pin = 2;
-int button_pin
+int button_pin = 
 
 int numSamples = 3;
 int samplesRead = 0;
 
-float readECG()
-{
-  if((digitalRead(9) == 1)||(digitalRead(10) == 1)){
-    return 0;
-  }
-  else {
-    // send the value of analog input 0:
-      float read = analogRead(A0);
-      return read;
-  }
-}
-
-void RGB_color(int red_light_value, int green_light_value, int blue_light_value)
- {
-  analogWrite(red_light_pin, red_light_value);
-  analogWrite(green_light_pin, green_light_value);
-  analogWrite(blue_light_pin, blue_light_value);
-}
 
   
 void setup() {
