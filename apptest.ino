@@ -1,11 +1,13 @@
 #include <SoftwareSerial.h>
+#include <string> 
 
 SoftwareSerial BLE(1,0);
-#include "functions.h"
-
 int red_light_pin= 7;
 int green_light_pin = 6;
 int blue_light_pin = 5;
+
+#include "functions.h"
+int count = 0; 
 
 void setup() {
   Serial.begin(9600);
@@ -22,5 +24,10 @@ void loop() {
   Serial.println(readECG());
   BLE.print(readECG());
   delay(50);
-
+  count++;
+  if (count == 40){
+    BLE.print("i"); 
+    BLE.print(analogRead(1));
+    count = 0;
+  }
 }
