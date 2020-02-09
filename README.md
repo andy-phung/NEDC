@@ -11,7 +11,7 @@
     - Andy: poster, technical presentation, software and hardware implementation
     - Louie: pitch presentation
     - Nathan:
-    - Suryabhan: project report
+    - Suryabhan: pitch presentation, poster
     
 
   
