@@ -12,9 +12,9 @@ float readECG()
 
 void RGB_Color(int red_light_value, int green_light_value, int blue_light_value)
  {
-  analogWrite(red_light_pin, red_light_value);
-  analogWrite(green_light_pin, green_light_value);
-  analogWrite(blue_light_pin, blue_light_value);
+  analogWrite(7, red_light_value);
+  analogWrite(6, green_light_value);
+  analogWrite(5, blue_light_value);
 }
 void setupBleConnection()
     {
