@@ -13,7 +13,6 @@
 #define RED 7
 #define GREEN 6
 #define BLUE 5
-#define BUTTON_PIN 4
 
 #include <SoftwareSerial.h> 
 
@@ -26,9 +25,9 @@
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "tensorflow/lite/version.h"
 #include "model1.h"
-//#include "model2.h" //note: model1 is defined as "model1" in this header file, not "model"
+#include "model2.h" //note: model1 is defined as "model1" in this header file, not "model"
 
-SoftwareSerial BLE(RX1,TX1);
+SoftwareSerial BLE(1,0);
 
 #include "functions.h"
 
@@ -41,7 +40,7 @@ int inference_count = 0;
 
 // Create an area of memory to use for input, output, and intermediate arrays.
 // Finding the minimum value for your model may require some trial and error.
-constexpr int kTensorArenaSize = 290 * 1024;
+constexpr int kTensorArenaSize = 150 * 1024;
 uint8_t tensor_arena[kTensorArenaSize];
 
 int red_light_pin= 7;
@@ -51,14 +50,13 @@ int button_pin = 4;
 
 int numSamples = 3;
 int samplesRead = 0;
-int buttonState = 0;
-
+char recvChar;
+int counter = 0;
   
 void setup() {
   pinMode(red_light_pin, OUTPUT);
   pinMode(green_light_pin, OUTPUT);
   pinMode(blue_light_pin, OUTPUT);
-  pinMode(button_pin, OUTPUT);
   pinMode(RX1, INPUT);
   pinMode(TX1, OUTPUT);
   Serial.begin(9600);
@@ -68,7 +66,7 @@ void setup() {
 
   // Map the model into a usable data structure. This doesn't involve any
   // copying or parsing, it's a very lightweight operation.
-  model = tflite::GetModel(model1);
+  model = tflite::GetModel(model2);
   if (model->version() != TFLITE_SCHEMA_VERSION) {
     error_reporter->Report(
         "Model provided is schema version %d not equal "
@@ -100,22 +98,27 @@ void setup() {
   // Obtain pointers to the model's input and output tensors.
   input = interpreter->input(0);
   output = interpreter->output(0);
-  Serial.println(0);
-  Serial.println(0.25);
   //TfLiteStatus invokeStatus = interpreter->Invoke();
-  RGB_Color(0, 255, 255); // Cyan
+  RGB_Color(139, 0, 0); // Dark Red
 }
 
 void loop() {
 while(samplesRead < numSamples){
-  buttonState = digitalRead(buttonPin); //can be either HIGH or LOW
-  if(buttonState == HIGH){
-    Artemis_Deep_Sleep();
+  BLE.print(readECG());
+  Serial.println(readECG());
+  recvChar = BLE.read(); //can be either HIGH or LOW
+  if(recvChar = 'c'){
+    RGB_Color(0, 255, 255); //Cyan
+  }
+  if(recvChar = 's'){
+    //Artemis_Deep_Sleep();
+    RGB_Color(0, 0, 0);
   }
   input->data.f[samplesRead] = (readECG() - 200)/700;
   //Serial.println("input:");
   //Serial.println((readECG() - 200)/700);
   samplesRead++;
+  counter++;
   if (samplesRead == numSamples) {
         // Run inferencing
         //TfLiteStatus invokeStatus = interpreter->Invoke();
@@ -124,12 +127,21 @@ while(samplesRead < numSamples){
           Serial.println("Invoke failed!");
           while (1);
         }
-*/
+        */
         samplesRead = 0;
-        Serial.println("output:");
-        Serial.println(abs(output->data.f[0])); 
-        }
-  delay(2000);
+        };
+   delay(50);
+   if (counter == 40){
+    delay(10);
+    counter = 0;
+    BLE.print("i"); 
+    BLE.print(abs(output->data.f[0])/1.25); 
+    Serial.print("i");
+    Serial.println(abs(output->data.f[0])/1.25); 
+    delay(10);
+   }
+  
+
   }
+  
   }
-//TODO: retrain model, make sure code is consistent
