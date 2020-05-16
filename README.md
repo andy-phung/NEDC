@@ -6,12 +6,7 @@
 **Logistics**
   - Registration: January 17
   - Project Report, Pitch Presentation, and Technical Presentation Submission: February 19
-  - Members: Andy, Louie, Nathan (rip), Suryabhan
-  - **Work Distribution**
-    - Andy: poster, technical presentation, software and hardware implementation
-    - Louie: pitch presentation
-    - Nathan:
-    - Suryabhan: pitch presentation, poster
+  - Members: Andy, Louie, Nathan, Suryabhan
     
 
   
